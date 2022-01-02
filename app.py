@@ -15,7 +15,7 @@ if not(os.path.isdir(path+'/Converted')):
 	
 
 
-
+# Function to check for any issues in the received data
 def check(pdf,angle,pagenum):
 	if pdf.filename == '':
 		return {"Message" :"File has not been uploaded...",'status_code' : 301}
@@ -45,6 +45,8 @@ class Rotate(Resource):
 		pdf_writer = PyPDF2.PdfFileWriter()
 		totalpages= pdf_reader.numPages
 		
+		
+		#Rotate the specified page
 
 		for pageno in range(totalpages):
 			page = pdf_reader.getPage(pageno)
