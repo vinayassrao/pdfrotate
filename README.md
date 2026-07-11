@@ -27,7 +27,7 @@ cd pdfrotate
 
 # 2. Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate        # Windows: venv\\Scripts\\activate
+source venv/bin/activate        # Windows: venv\Scripts\activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -47,9 +47,9 @@ Open http://127.0.0.1:5000 in a browser, choose a PDF, enter a page number and r
 ### Option B — API call
 
 ```bash
-curl -X POST http://127.0.0.1:5000/Rotate \\
-  -F "pdf=@sample.pdf" \\
-  -F "degree=90" \\
+curl -X POST http://127.0.0.1:5000/Rotate \
+  -F "pdf=@sample.pdf" \
+  -F "degree=90" \
   -F "pagenum=1"
 ```
 
